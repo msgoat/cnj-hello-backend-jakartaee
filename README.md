@@ -4,7 +4,7 @@ Simplest possible cloud native java application based on Jakarta EE 9.
 
 ## Status
 
-![Build status](https://drone.cloudtrain.aws.msgoat.eu/api/badges/msgoat/cnj-hello-backend-jakartaee/status.svg)
+![Build status](https://codebuild.eu-west-1.amazonaws.com/badges?uuid=eyJlbmNyeXB0ZWREYXRhIjoiWWRuMTNQamc0WGV2SWFOeWl3bEx4WWVIK3pYY0U0ZjJzUzY1Smk1VVBwdnFEcXd3Tmd0S080alkrNWlabjNIRWx2RE9FSllEZFFlUFJydFJhNUY0QkdRPSIsIml2UGFyYW1ldGVyU3BlYyI6Ik1hbXdUUGdYaG9XMUJVR1UiLCJtYXRlcmlhbFNldFNlcmlhbCI6MX0%3D&branch=main)
 
 ## Release Information
 
