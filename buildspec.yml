@@ -24,7 +24,7 @@ phases:
       - echo "Authenticate on DockerHub"
       - docker login -u $DOCKERHUB_USER -p $DOCKERHUB_PAT
       - echo "Authenticate on EKS"
-      - aws eks update-kubeconfig --name eks-eu-west-1-cloudtrain-dev-cloudtrain --role arn:aws:iam::928593304691:role/role-eu-west-1-cloudtrain-eks
+      - aws eks update-kubeconfig --name $CLOUDTRAIN_EKS_CLUSTER_NAME --role $CLOUDTRAIN_EKS_ROLE_ARN
       - kubectl cluster-info
   build:
     on-failure: ABORT
