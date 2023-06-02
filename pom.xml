@@ -8,23 +8,25 @@
     <description>Simple cloud native Java backend based on Jakarta EE Full Profile</description>
     <properties>
         <!-- new Maven version management -->
-        <revision>6.1.0</revision>
+        <revision>7.0.0</revision>
         <sha1></sha1>
         <changelist></changelist>
         <!-- general properties -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <!-- runtime related properties -->
-        <java.version>11</java.version>
-        <jakartaee.version>9.1.0</jakartaee.version>
-        <payara.version>5.2021.7</payara.version>
-        <microprofile.version>4.1</microprofile.version>
+        <!-- runtime related properties -->
+        <java.version>17</java.version>
+        <jakartaee.version>10.0.0</jakartaee.version>
+        <payara.version>6.2023.5</payara.version>
+        <microprofile.version>5.0</microprofile.version>
         <!-- common logging dependencies -->
-        <slf4j.version>1.7.32</slf4j.version>
+        <slf4j.version>2.0.6</slf4j.version>
         <!-- common test dependencies -->
         <junit.version>5.8.1</junit.version>
-        <restassured.version>3.3.0</restassured.version>
-        <cnj.common.test.version>3.0.0</cnj.common.test.version>
+        <restassured.version>4.5.1</restassured.version>
+        <cnj.common.test.core.version>1.1.0</cnj.common.test.core.version>
+        <cnj.common.test.jakarta.version>1.0.0</cnj.common.test.jakarta.version>
         <!-- docker related properties -->
         <docker.registry.name>docker.cloudtrain.aws.msgoat.eu</docker.registry.name>
         <docker.organization.name>cloudtrain</docker.organization.name>
@@ -151,8 +153,14 @@
         </dependency>
         <dependency>
             <groupId>group.msg.at.cloud.common</groupId>
-            <artifactId>cnj-common-test</artifactId>
-            <version>${cnj.common.test.version}</version>
+            <artifactId>cnj-common-test-core</artifactId>
+            <version>${cnj.common.test.core.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>group.msg.at.cloud.common</groupId>
+            <artifactId>cnj-common-test-jakarta</artifactId>
+            <version>${cnj.common.test.jakarta.version}</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
@@ -173,6 +181,12 @@
                         <source>${java.version}</source>
                         <target>${java.version}</target>
                         <parameters>true</parameters>
+                        <showDeprecation>true</showDeprecation>
+                        <showWarnings>true</showWarnings>
+                        <compilerArgs>
+                            <arg>-Xlint</arg>
+                            <!-- <arg>-Xdoclint</arg> -->
+                        </compilerArgs>
                     </configuration>
                 </plugin>
                 <plugin>

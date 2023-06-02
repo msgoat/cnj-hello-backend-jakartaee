@@ -6,6 +6,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [7.0.0] - 2023-06-02
+### Changed
+- upgraded to Java 17
+- upgraded to Jakarta 10
+- upgraded to Payara 6.2023.5
+- upgraded all dependencies
+- moved to new AWS CodeBuild pipeline
+- switched to ingress controller NGinX
+
 ## [6.1.0] - 2022-11-08
 ### Added
 ### Changed
