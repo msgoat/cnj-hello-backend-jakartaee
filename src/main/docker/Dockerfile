@@ -1,4 +1,4 @@
-FROM docker.cloudtrain.aws.msgoat.eu/cloudtrain/cnj-docker-payara-full:7.0.0
+FROM docker.cloudtrain.aws.msgoat.eu/cloudtrain/cnj-docker-payara-full:latest
 
 LABEL maintainer="michael.theis@msg.group" \
         ${project.groupId}.${project.artifactId}.project="CloudTrain" \
