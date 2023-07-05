@@ -14,16 +14,28 @@ A changelog can be found in [changelog.md](changelog.md).
 
 `docker pull docker.cloudtrain.aws.msgoat.eu/cloudtrain/cnj-hello-backend-jakartaee`
 
-## Run this application 
+## HOW-TO build this application locally
 
-```shell 
-docker run --name cnj-hello-backend-jakartaee -p 8080:8080 docker.cloudtrain.aws.msgoat.eu/cloudtrain/cnj-hello-backend-jakartaee
-```
-
-## Build this application 
+If all prerequisites are met, just run the following Maven command in the project folder:
 
 ```shell 
 mvn clean verify -P pre-commit-stage
 ```
 
-Build results: a Docker image containing a Payara Full Profile application server plus the deployed application.
+Build results: a Docker image containing the showcase application.
+
+## HOW-TO run this showcase locally
+
+In order to run the whole showcase locally, just run the following docker commands in the project folder:
+
+```shell 
+docker compose up -d
+docker compose logs -f 
+```
+The showcase application will be accessible via `http://localhost:38080`.
+
+Press `Ctlr+c` to stop tailing the container logs and run the following docker command to stop the show case:
+
+```shell 
+docker compose down
+```

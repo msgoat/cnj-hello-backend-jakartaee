@@ -7,7 +7,7 @@
 services:
 
   backend:
-    image: docker.cloudtrain.aws.msgoat.eu/cloudtrain/cnj-hello-backend-jakartaee:${project.version}
+    image: docker.cloudtrain.aws.msgoat.eu/cloudtrain/cnj-hello-backend-jakartaee:latest
     ports:
       - "38080:8080"
 
